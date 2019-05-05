@@ -1,0 +1,12 @@
+<div class="offset-lg-4 col-lg-4">
+  <br><br><br>
+  <app-city-search (searched)="search($event)"></app-city-search>
+  <br>
+  <app-weather-card [weather]="weather" *ngIf="weather"></app-weather-card>
+  <app-spinner *ngIf="isLoading"></app-spinner>
+
+  <div class="alert alert-danger" role="alert" *ngIf="notFound">
+    Cidade não encontrada
+  </div>
+
+</div>
